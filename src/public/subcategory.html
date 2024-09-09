@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Subcategory | ae.gr</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Rental information provider">
+    <meta name="keywords" content="Appartment,homes,room,parking space"> 
+    <meta name="authors" content="3200218-3200045">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://kit.fontawesome.com/29b69051c1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+    <link rel="icon" type="image/x-icon" href="assets/icon-ae.png">
+
+    <!-- Include Handlebars from a CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.7/dist/handlebars.min.js"></script>
+</head>
+
+<body onload = "fsubcat()">
+
+    <nav class="pho">
+        <input type="checkbox" id="check">
+
+        <div class="stackNav">
+            <div class="logo">
+                <h1>The Silver Chance</h1>
+            </div>
+            
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+        </div>
+
+        <div class="menuX">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="tech.html">Contact</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </div>
+        
+    </nav>
+
+
+    <header>
+        <nav class="lap">
+            <h1>The Silver Chance</h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="tech.html">Contact</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    
+
+    <div class="carR">
+        <div class="main-content" id="adsContainer">
+            <h1>Sub Categories</h1>
+
+
+        </div>
+    </div>    
+
+    <script id="subc" type="text/x-handlebars-template">
+        {{#each ad}}
+            <ul>
+                <div class="carG">
+                    <p class="carDR">{{ title }}</p>
+                    <li class="carPho carPhoGG">
+                        <div class="allImg">
+                            {{#each images}}
+                                <img src="https://wiki-ads.onrender.com/{{this}}" alt="{{title}}">
+                            {{/each}}
+                        </div>
+
+                        <article>
+                            <p>{{ description }}</p>
+                        </article>
+
+                        <table class="tbl">
+                            {{#each tb}}
+                                {{#each this}}
+                                <tr>
+                                    <td>{{ k }}</td>
+                                    <td>{{ v }}</td>
+                                </tr>
+                                {{/each}}
+                            {{/each}}
+                        </table>
+                    </li>
+                    <p class="carD">{{ cost }} €</p>
+                </div>
+            </ul>
+        {{/each}}
+    </script>
+
+
+
+
+        
+    <footer>
+
+        <div class="fooL">
+            <div class="fmenu">
+                <h5>Menu</h5>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="tech.html">Contact</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </div>
+
+            <div class="cat">
+                <h5>Contact</h5>
+                <li><p><i class="fa-solid fa-phone"></i>&nbsp;&nbsp;&nbsp;2100000000</p></li>
+                <li><p><i class="fa-solid fa-map-location-dot"></i>&nbsp;&nbsp;&nbsp;28th October 666</p></li>
+                <li><p><i class="fa-solid fa-envelope"></i>&nbsp;&nbsp;&nbsp;thesilverchance@aueb.gr</p></li>
+            </div>
+        </div>
+        <div class="social">
+            <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+            <a href="instagram.com"><i class="fa-brands fa-instagram"></i></a>
+            <a href="tiktok.com"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+
+        
+    </footer>
+    
+        <div class="outerfooter">
+            Copyright &copy; 2024 All rights reserved | Chasap X Dris
+        </div>
+</body>
+
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Rental information provider">
+    <meta name="keywords" content="Appartment,homes,room,parking space"> 
+    <meta name="authors" content="3200218-3200045">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- <script src="script.js"></script> -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script src="https://kit.fontawesome.com/29b69051c1.js" crossorigin="anonymous"></script>
+
+    <link rel="icon" type="image/x-icon" href="assets/icon-ae.png">
+    <title>Category | ae.gr</title>
+    <script src="script.js"></script>
+
+    <!-- Include Handlebars from a CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.7/dist/handlebars.min.js"></script>
+
+</head>
+
+<body onload = "fcat()">
+
+    <nav class="pho">
+        <input type="checkbox" id="check">
+
+        <div class="stackNav">
+            <div class="logo">
+                <h1>The Silver Chance</h1>
+            </div>
+            
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+        </div>
+        <div class="menuX">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </div>
+        
+    </nav>
+
+
+    <header>
+        <nav class="lap">
+            <h1>The Silver Chance</h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+        <div class="lgn">
+            <form id="loginForm">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <div class="lb">
+                    <button type="button" onclick="login()">Login</button>
+                    <button type="button" onclick="logout()">Log out</button>
+                </div>
+            </form>
+            <div id="loginMessage" style="display: none;"></div>
+        </div>
+
+    
+    <div class="carR">
+
+
+        <script id="s" type="text/x-handlebars-template">
+            {{#each ss}}
+                <label class="lbl cara">{{ title }}<input class="rf" onclick="selectSubcat('{{id}}')" data-adid="{{ id }}" type="radio"name="subc"><span class="dot"></span></label>
+            {{/each}}
+        </script>
+
+        <div class="main-content" id="adsContainer">
+            <h1>House Rentals</h1>
+            <p>From a simple home to maybe even a gingerbreaad house all available offers for houses here</p>
+
+
+            <div class="filter">
+                <form action="">
+                    <h4>Select which subcategory you want to see!</h4>
+
+                    <div class="rad carad">
+                        <label  class="lbl cara">All<input onclick="selectSubcat(0)" class="rf" data-adid="0" type="radio"name="subc" checked><span class="dot"></span></label>
+                    </div>
+                </form>
+            </div>
+
+            <div class="adsHandle">
+
+            </div>
+
+
+        </div>
+
+        <script id="c" type="text/x-handlebars-template">
+            {{#each ad}}
+                <ul>
+                    <div class="carG">
+                        <p class="carDR">{{ title }}</p>
+                        <li class="carPho">
+                            <img src="{{0 images}}" width="400px" height="300px">
+                            <article>
+                                <p>{{ description }}</p>
+                            </article>
+                            <p class="fav"><i class="fa-solid fa-heart" onclick="addFavorite('{{id}}','{{title}}',`{{description}}`,'{{cost}}','{{0 images}}',sessionStorage.getItem('username'),sessionStorage.getItem('sessionId'))"></i></p>
+                        </li>
+                        <p class="carD">{{ cost }} €</p>
+                    </div>
+                </ul>
+            {{/each}}
+        </script>
+
+    </div>    
+
+
+
+    <div class="favs">
+        <a><i class="fa-regular fa-heart"></i></a>
+        <script id="ff" type="text/x-handlebars-template">
+            <a href="favorite-ads.html?username={{ un }}&sessionId={{ sid }}"><i class="fa-regular fa-heart"></i></a>
+        </script>
+    </div>
+
+
+
+        
+    <footer>
+
+        <div class="fooL">
+            <div class="fmenu">
+                <h5>Menu</h5>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </div>
+
+            <div class="cat">
+                <h5>Contact</h5>
+                <li><p><i class="fa-solid fa-phone"></i>&nbsp;&nbsp;&nbsp;2100000000</p></li>
+                <li><p><i class="fa-solid fa-map-location-dot"></i>&nbsp;&nbsp;&nbsp;28th October 666</p></li>
+                <li><p><i class="fa-solid fa-envelope"></i>&nbsp;&nbsp;&nbsp;thesilverchance@aueb.gr</p></li>
+            </div>
+        </div>
+        <div class="social">
+            <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+            <a href="instagram.com"><i class="fa-brands fa-instagram"></i></a>
+            <a href="tiktok.com"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+
+        
+    </footer>
+    
+        <div class="outerfooter">
+            Copyright &copy; 2024 All rights reserved | Chasap X Dris
+        </div>
+
+
+
+    <!-- <script src="script.js"></script> -->
+
+</body>
+    <script>
+        window.addEventListener('unload', () => {sessionStorage.clear();});
+    </script>
+</html>
+

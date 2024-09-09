@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Home page">
+    <meta name="keywords" content="property,vehicles,equipment"> 
+    <meta name="authors" content="3200218-3200045">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://kit.fontawesome.com/29b69051c1.js" crossorigin="anonymous"></script>
+
+    <link rel="icon" type="image/x-icon" href="assets/icon-ae.png">
+    <script src="https://cdn.jsdelivr.net/npm/handlebars/dist/handlebars.min.js"></script>
+    <script src="script.js"></script>
+    <title>Home Page | ae.gr</title>
+
+</head>
+
+<body onload="findex()">
+
+    <nav class="pho">
+        <input type="checkbox" id="check">
+
+        <div class="stackNav">
+            <div class="logo">
+                <h1>The Silver Chance</h1>
+            </div>
+            
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+        </div>
+
+        <div class="menuX">
+            <ul>
+                <li class="act"><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </div>
+        
+    </nav>
+
+
+    <header>
+        <nav class="lap">
+            <h1>The Silver Chance</h1>
+            <ul>
+                <li class="act"><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="index">
+        <div class="main-content">
+            <h1>Welcome to our website The Silver Chance. In here we have what you search for</h1>
+            <p>Our goal is to provide to our clients the opportunity to fulfill from their materialistic needs to their everyday needs</p>
+            <h1>Category List</h1>
+            <p>Here lies the vast majority of rental offers neatly organanized into categories. Our categories are diveded into more specific themes so it is easier to identify your need</p>
+            
+            
+
+            <section>
+
+                <div class="categories">
+
+                </div>
+                <script id="sc" type="text/x-handlebars-template">
+            
+                    {{#each categories}}
+                        <li class="category-log" >
+                            <p>{{ title }}</p>
+                            
+                            <div class="catImg">
+                                <a href="category.html?id={{ id }}"><img src="{{img_url}}"></a>
+                            </div>
+            
+                            <ul class="subcategories">
+
+                                {{#each subcategories}}
+                                    <div class="subItem">
+                                        <a href="subcategory.html?id={{ id }}"><li class="subcategory">{{ title }}</li></a>
+                                    </div>
+                                {{/each}}
+
+                            </ul>
+            
+                        </li>
+                    {{/each}}
+
+                </script>
+            
+            </section>
+        </div>
+    </div>
+
+
+    <footer>
+
+        <div class="fooL">
+            <div class="fmenu">
+                <h5>Menu</h5>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </div>
+
+            <div class="cat">
+                <h5>Contact</h5>
+                <li><p><i class="fa-solid fa-phone"></i>&nbsp;&nbsp;&nbsp;2100000000</p></li>
+                <li><p><i class="fa-solid fa-map-location-dot"></i>&nbsp;&nbsp;&nbsp;28th October 666</p></li>
+                <li><p><i class="fa-solid fa-envelope"></i>&nbsp;&nbsp;&nbsp;thesilverchance@aueb.gr</p></li>
+            </div>
+        </div>
+        <div class="social">
+            <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+            <a href="instagram.com"><i class="fa-brands fa-instagram"></i></a>
+            <a href="tiktok.com"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+
+        
+    </footer>
+
+    <div class="outerfooter">
+        Copyright &copy; 2024 All rights reserved | Chasap X Dris
+    </div>
+</body>
+
+</html>

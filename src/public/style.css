@@ -1,0 +1,1302 @@
+:root { /* Variables set for colors */ 
+    --pink: #CF9FFF;
+    --hoverPink: #8a2264;
+    --darkPink: rgb(90, 0, 90);
+}
+
+
+* { /* Rules to apply on all elements and the fonts we using */
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Serif', serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+@font-face {
+    font-family: cntnt;
+    src: url(sans-serif);
+}
+
+
+li { /* For the li tag to not have the dot in front  */
+    list-style-type: none;
+}
+
+a { /* For the a tag to not have underline the a little space between the letters */
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+body {
+    background-color: #E6E6FA;
+}
+
+
+/* ================ NavBar ================ */
+
+.pho {
+    padding-bottom: 50%;
+}
+.stackNav { /* The navigaation bar which been showed in the phone dimensions */
+    display: grid;
+    position: fixed;
+    width: 100%;
+    height: 9vh;
+    grid-template-columns: 50% 30% 20%;
+    background-color: var(--pink);
+    color: white;
+    z-index: 1;
+}
+.logo { /* Centers all sides of the logo */
+    margin: auto; 
+}
+.logo h1{ /* The font rules for the logo */
+    font-size: 5vw;
+    font-family: 'Noto Serif';
+    font-weight: 500;
+}
+.checkbtn{ /* the position for the menu button on phone */
+    grid-column: 3;
+    margin: auto;
+}
+
+.menuX { /* The menu rules for the phone */
+    padding-top: 30%;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: var(--pink);
+    top: 9vh;
+    right: -100%;
+    transition: all .5s;
+    z-index: 1;
+}
+
+.menuX a { /* The menu pages rules */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 10%;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 3vw;
+    /* font-weight: 300; */
+}
+
+#check:checked ~ .menuX{ /* When checked the menu button */
+    right: 0;
+}
+
+#check { /* Hides the default checkbox */
+    display: none;
+}
+
+
+.lap { /* Hides the navigation bar that we use on tablet and laptop+ dimensions*/
+    display: none;
+}
+
+.act a { /* Changes the color and the font weight on the active page */
+    font-weight: 800;
+    color: var(--hoverPink);
+}
+
+
+
+/* ================ Main Content ================ */
+
+.main-content {
+    background-color: #E6E6FA; /*background colour for main content of all the pages*/
+    color: var(--darkPink); /*color of the text for every text inside the main context of the pages*/
+
+}
+
+
+/* ================ Index ================ */
+
+
+.index {
+    text-align: center; /*set the text of the index part of our home page to be at the center of the page*/
+}
+.index h1 {
+    font-family: 'Ubuntu', sans-serif; /*setting the font type of the titles of index to be ubuntu*/
+}
+.index p {
+    font-family: 'Roboto', sans-serif; /*set the text of the main body to be in this fotn style*/
+}
+
+.index img {
+    border-radius: 10px; /*rounding edges for the images*/
+    margin: 15% auto 3%; /*to create some space between the images first var for top second for left and right and third for bottom*/
+}
+
+.index h1 {
+    font-size: 5vw; /*set the size and thickness of the text (weigth) of the first title*/
+    width: 90%; /*setting the width of the title*/
+    margin: auto; /*automatically adjusting the space outer of title*/
+    margin-bottom: 5%; /*the space under the title*/
+    padding-top: 40%; /*setting the padding to create extra space on the inner of the element*/
+}
+.index p {
+    font-size: 4vw; /*setting the font size of our main text*/
+    margin: auto auto 20%; /*setting the space to be auto for top left and right and 20% for the bottom*/
+    width: 80%; /*setting the width of the text*/
+}
+
+.categories p {
+    font-size: 2.5rem;
+}
+.subcategories li {
+    font-size: 1.5rem;
+}
+.subItem {
+    margin-bottom: 10%;
+}
+
+
+/* ================ Favorite Button ================ */
+
+.favs {
+    font-size: 2.8rem;
+    background-color: rgb(200, 0, 0);
+    color: #E6E6FA;
+    
+    position: sticky;
+    margin: 30px;
+    bottom: 20px;
+    top: 100px;
+    
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.favs:hover {
+    background-color: #E6E6FA;
+    border: solid 2px rgb(230, 0, 0);
+    transition: 0.3s ease-in-out;
+}
+.favs a {
+    color:#E6E6FA;
+}
+.favs a:hover {
+    color: rgb(230, 0, 0);
+}
+.favs i {
+    margin-top: 14px;
+}
+
+
+
+/* ================ Login ================ */
+
+.lgn {
+    background-color: var(--pink);
+    padding: 4%;
+    border-radius: 2% 2% 25% 25%;
+    width: 60%;
+    margin: auto;
+    margin: 10% auto 7%;
+}
+
+.lgn h6 {
+    text-align: center;
+    margin-top: 5%;
+    font-size: 0.8rem;
+}
+
+
+.filter {
+    background-color: var(--pink);
+    border-radius: 20px;
+    margin: 30% auto;
+    width: 80%;
+    padding: 2% 20px 1px;
+}
+
+.carad {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.carad label{
+    font-size: 1rem;
+    margin: 3%;
+}
+.cara {
+    margin: auto;
+}
+
+.lb {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 4%;
+}
+.lb button {
+    color: #f2f2f2;
+    background-color: var(--hoverPink);
+    padding: 2% 3%;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: 0.1s ease-in-out;
+}
+.lb button:hover {
+    background-color: var(--darkPink);
+    cursor: pointer;
+    transition: 0.1s ease-in-out;
+}
+
+#loginMessage {
+    margin: 5% auto 0;
+    padding: 3% 1%;
+    width: 70%;
+    border-radius: 10px;
+}
+
+
+.category-catalog {
+    padding-top: 40%; /*for the space of inner element*/
+    background-color: #E6E6FA; /*setting background color for the catalog*/
+    text-align: center; /*setting the text to be in the center of the page*/
+}
+
+.category-catalog h1 {
+    margin-bottom: 5%; /*bottom space around title to be 5%*/
+}
+.category-catalog p {
+    margin: auto 5% 20%; /*space around the title top is auto left and right is 5 and bottom is 20*/
+}
+.categories {
+    font-family: 'Roboto', sans-serif; /*setting the font of the categories*/
+    display: flex; /*creating a flex layout*/
+    flex-direction: column;
+}
+.categories a {
+    font-size: 2vw; /*setting the size of the links*/
+    color: var(--darkPink); /*setting the colour of the links*/
+}
+
+
+.subcategories {
+    display: flex;
+    flex-direction: column;
+    margin: 20% auto; /*setting the outer space of the subcategories 20 for top bottom and auto for left right*/
+}
+
+.subcategories li {
+    margin: 2% auto 10%; /*for every item of the list in subcategories set the outer space*/
+}
+
+.category-log {
+    background-color: var(--pink); /*set the background colour*/
+    padding: 5%;    /*set the inner space of the element*/
+    margin: 10% 5%; /*set the outer space of the element*/
+    border-radius: 10px; /*rounding the corners*/
+}
+
+.catImg {
+    margin: 3% auto;
+}
+.catImg img {
+    width: 90%;
+}
+.catImg hr {
+    background-color: var(--darkPink);
+    width: 30%;
+    margin: auto;
+}
+table {
+    border-collapse: collapse;
+    font-size: 1rem;
+    margin: 5% 10%;
+    /* padding: 100px; */
+}
+
+td, th {
+    border: 1px solid var(--darkPink); 
+    text-align: center;
+    padding: 20px;
+}
+
+/* ================ About Us ================ */
+
+.we { /* The gradient effect on the background */
+    background: 
+                linear-gradient(rgba(255,0,0,0) 90%, var(--hoverPink)),
+                linear-gradient(var(--hoverPink) 45%, var(--pink) 60%);
+}
+
+.we { /* The position of the content in one column for phone dimensions */
+    display: grid;
+    grid-template-columns: 1fr;
+
+    text-align: center;
+
+    padding-top: 70%;
+    padding-bottom: 50%;
+
+}
+
+.we img { /* The profile photos for the team */
+    border-radius: 50%;
+    height: 130px;
+    width: 130px;
+}
+
+.we h3 { /* The team names */
+    margin-top: 5%;
+    color: whitesmoke;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.we h4 { /* The titles */
+    margin-bottom: 5%;
+    color: whitesmoke;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.we p { /* The content */
+    margin-bottom: 2%;
+    font-family: 'Roboto', sans-serif;
+}
+
+.weinfos { /* Position thhe content */
+    margin: 30% 1% 10%;
+}
+
+.we div:nth-child(1) { /* First person properties */
+    color: var(--pink);
+    margin-bottom: 60%;
+}
+.we div:nth-child(2) { /* Second person properties */
+    color: var(--hoverPink);
+}
+
+
+/* ================ Tech ================ */
+
+.tech { /* The main properties for the tech and registation pages */
+    background-color: #E6E6FA;
+    padding: 150px 50px;
+}
+
+.tech-container { /* Main form box properties */
+    border-radius: 10px;
+    background-color: #f2f2f2;
+    padding: 25px;
+    color: var(--darkPink);
+    font-family: 'Roboto', sans-serif;
+}
+
+input[type=text], input[type=number], input[type=email], input[type=password], textarea { /* The rules for the text and textarea type input */
+    width: 100%;
+    padding: 3%;
+    border: none;
+    border-radius: 8px;
+    margin: 1.5vh auto 4vh;
+    resize: vertical;
+}
+
+input[type=text]:hover, input[type=number]:hover, input[type=email]:hover, input[type=password]:hover, textarea:hover { /* The hover for the text and textarea type input */
+    background-color: #E6E6FA;
+}
+input[type=text]:focus, input[type=number]:focus, input[type=email]:focus, input[type=password]:focus, textarea:focus { /* The focus for the text and textarea type input */
+    background-color: #d6d6e9;
+    color: var(--hoverPink);
+}
+
+input[type=submit] { /* The rules for the submit type input */
+    background-color: var(--hoverPink);  
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+    margin-left: 45%;
+}
+
+input[type=submit]:hover { /* The hover rules for the submit type input */
+    background-color: var(--darkPink);
+}
+
+
+
+
+/* ================ Registation ================ */
+
+fieldset { /* The fieldset tag design */
+    padding: 7% 4%;
+    border-color: var(--darkPink);
+    border-radius: 10px;
+}
+legend { /* The title for the fieldset tag */
+    color: var(--darkPink);
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 5vw;
+    padding: 0 1%;
+    margin: auto;
+}
+
+
+input[type=date], select, details { /* Rules for the date type input and select and details tag */
+    padding: 1%;
+    border: none;
+    border-radius: 8px;
+    margin: 1.5vh auto 4vh;
+    width: 100%;
+    color: var(--darkPink);
+    font-family: 'Roboto', sans-serif;
+}
+input[type=date]:hover, select:hover { /* Rules for the hover effect on date type input and select */
+    background-color: #E6E6FA;
+    cursor: pointer;
+}
+input[type=date]:focus, select:focus { /* Rules for the focus effect on date type input and select */
+    background-color: #d6d6e9;
+    color: var(--hoverPink);
+}
+
+details { /* Basic rules for the details tag */
+    margin-top: 8%;
+    font-size: 3vw;
+}
+details p { /* Position the p in details tag */
+    margin: 2% auto auto 3%;
+}
+details[open] { /* When we extent the details tag (open) to create a border and change the background color */
+    background-color: #E6E6FA;
+    border: inset 3px var(--darkPink);
+}
+
+
+input[type=radio] { /* To make invisible and get out of the way the default radio button */
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+input[type=checkbox] { /* To make invisible and get out of the way the default checkbox button */
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.rad { /* The position for the rad class (divs) */
+    font-family: 'Roboto', sans-serif;
+    margin: 8% auto;
+}
+.rad h4 { /* The titles for the questions */
+    font-size: 3.5vw;
+    margin: 5% auto;
+}
+
+.lbl { /* The class for the label tags */
+    display: block;
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 6%;
+    cursor: pointer;
+    font-size: 3.5vw;
+    user-select: none;
+}
+
+.dot, .che { /* The custom radio and checkbox */
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: white;
+}
+.dot { /* The round effect for the custom radio buttons */
+    border-radius: 50%;
+}
+.lbl:hover input ~ .dot { /* The color change on hover radio buttons */
+    background-color: #E6E6FA;
+}
+.lbl:hover input ~ .che { /* The color change on hover checkbox buttons */
+    background-color: #E6E6FA;
+}
+.lbl input:checked ~ .dot { /* The color change on clicked radio buttons */
+    background-color: var(--hoverPink);
+}
+.lbl input:checked ~ .che { /* The color change on clicked checkbox buttons */
+    background-color: var(--hoverPink);
+}
+.dot:after, .che:after { /* The white dot and checkmark on the radio and checkbox buttons */
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.lbl input:checked ~ .dot:after { /* To make the dot appear */
+    display: block;
+}
+.lbl input:checked ~ .che:after { /* To make the checkmark appear */
+    display: block;
+}
+
+.lbl .dot:after { /* The position for the dot */
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+
+.lbl .che:after { /* The position for the checkmark */
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+
+
+
+
+
+
+
+/* ========== Ads ============== */
+
+
+.carR {
+    text-align: center; /*set the text to be in the center*/
+    color: white; /*set the colour of the text to be white*/
+    margin-bottom: 30%; /*set the outer space of bottom of the element*/
+}
+
+.carR h1 {
+    font-family: 'Ubuntu', sans-serif; /*set the font family of the title*/
+    font-size: 7vw; /*set the size of the title*/
+    color: var(--darkPink); /*set the colour of the title*/
+    padding: 30% 0; /*set the inner pace of the element*/
+}
+.carR p:nth-child(2) {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 3vw;
+    color: var(--darkPink);
+    margin-top: 5%;
+}
+
+.carG {
+    display: grid; /*settign a grid layout*/
+    grid-template-columns: repeat(12, 1fr); /*making the columns of the grid*/
+    margin: 10% auto;
+}
+
+.carPho { /*display of the rental ad*/
+    display: flex;/*setting the display to be flex inside the grid*/
+    flex-direction: column;
+    align-items: center; /*text at the center*/
+    margin: auto 5%; /*outer space of the element*/
+    background-color: var(--pink); /*set the background colour of the ad*/
+    border-radius: 0 15px 0 15px; /*to round the corners*/
+    grid-column: 1 / -1;
+
+}
+.carPhoGG {
+    display: grid;
+}
+
+.fav {
+    font-size: 2rem;
+    color: rgb(220, 0, 0);
+    margin: auto auto 20px;
+    transition: 0.1s ease-in-out;
+    cursor: pointer;
+}
+.fav:hover {
+    color: red;
+    transition: 0.1s ease-in-out;
+}
+
+.carPho article { /*css for the description of the add*/
+    font-family: 'Roboto', sans-serif;
+    font-size: 3vw;
+    padding: 8%;
+}
+.carPho img { /*css for the image of the ad*/
+    height: auto;
+    margin: 8% 5% auto;
+    border-radius: 15px;
+}
+
+.carDR, .carD { /*css for the name the code and the price of the ad*/
+    font-family: 'Roboto', sans-serif;
+    font-size: 3.5vw;
+    background-color: var(--pink);
+    padding: 3%;
+}
+
+
+.carDR { /*css for the name of the add*/
+    margin: auto 5vw;
+    border-radius: 15px 15px 0 0;
+    grid-column: 1 / 6;
+}
+.carD { /*css for only the code and the price*/
+    margin: auto 5vw;
+    border-radius: 0 0 15px 15px;
+    grid-column: 8 / -1;
+}
+.carDR a { /*css for the link*/
+    color: var(--darkPink);
+}
+
+.allImg img {
+    width: 70%;
+}
+
+
+/* ================ Favorites ================ */
+
+
+.favMain {
+    text-align: center; /*set the text to be in the center*/
+    margin-bottom: 30%; /*set the outer space of bottom of the element*/
+    font-family: 'Ubuntu', sans-serif; /*set the font family of the title*/
+    font-size: 4vw; /*set the size of the title*/
+    color: var(--darkPink); /*set the colour of the title*/
+    padding: 30% 0 0; /*set the inner space of the element*/
+}
+
+
+.favMain p:nth-child(2) {
+    margin: 4% auto;
+}
+
+
+
+
+
+
+/* ================ Footer ================ */
+
+
+footer { /* The basic footer properties */
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    height: 180vh;
+    color: white;
+    background-color: var(--pink);
+    font-family: 'Ubuntu', sans-serif;
+    clear: both;
+    
+}
+.fooL { /* The left side of the footer */
+    display: grid;
+}
+.fmenu { /* The left side of the left side of the footer */
+    font-size: 1.5vw;
+    margin: 20% auto auto;
+}
+
+.cat { /* The right side of the left side of the footer */
+    font-size: 1.5vw;
+    margin: 15% auto auto;
+}
+.fmenu h5, .cat h5 { /* The titles on the left side of the footer */
+    font-size: 5vw;
+    margin-bottom: 25%;
+}
+.fmenu li, .cat li { /* The list tags on the left side of the footer */
+    margin-bottom: 10%;
+}
+.fmenu a, .cat p { /* The content on the left side of the footer */
+    font-size: 4vw;
+    transition: 0.2s ease-in-out;
+    color: white;
+}
+.fmenu a:hover { /* When hover on the menu in footer */
+    color: var(--hoverPink);
+    transition: 0.2s ease-in-out;
+}
+.social { /* The right side of the footer */
+    margin: 10% 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 70%;
+    border-left: none;
+}
+
+.social a { /* The social icons on the right side of the footer */
+    color: white;
+    font-size: 8vw;
+    transition: 0.2s ease-in-out;
+    margin: auto;
+}
+.social a:hover, .social p:hover { /* The social icons hover effect on the right side of the footer */
+    color: var(--hoverPink);
+    transition: 0.2s ease-in-out;
+}
+.social a:nth-child(1) { /* The position for the 1st icon */
+    grid-column: 1 / 3;
+    grid-row: 1;
+}
+.social a:nth-child(2) { /* The position for the 2nd icon */
+    grid-column: 2 / -1;
+    grid-row: 1;
+}
+.social a:nth-child(3) { /* The position for the 3rd icon */
+    margin-top: 8%;
+    grid-column: 1 / -1;
+}
+
+
+.outerfooter { /* The outer footer (the div under the footer) */
+    font-family: 'Ubuntu', sans-serif;
+    color: white;
+    margin-top: 1px;
+    font-size: 3vw;
+    padding: 15px;
+    background-color: var(--pink);
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+/* ================ Tablet ================ */
+
+@media only screen and (min-width: 800px) { /* The 1st media query for dimensions 800px-1280px */
+    
+    
+    /* ================ Index ================ */
+
+    .index h1 {
+        font-size: 3vw; /*fixing the size of the title text*/
+        padding-top: 20%; /*adjusting the inner space*/
+    }
+    .index p {
+        font-size: 2vw; /*fixing the size of the main text*/
+        margin-bottom: 5%; /*fixing the space of the outer of the element*/
+    }
+
+    .categories p {
+        font-size: 2.5rem;
+    }
+    .subItem li {
+        font-size: 2rem;
+    }
+
+
+
+    /* ================ Categories  ================ */
+
+    .category-catalog {
+        padding-top: 10%; /*set the inner space of the top of the catalog*/
+    }
+    
+    .category-catalog h1 {
+        margin-bottom: 3%; /*set the outer space of the bottom of the title*/
+    }
+    .category-catalog p {
+        margin: auto 15% 10%; /*fix the space of the text inside the catalog*/
+        font-size: 2vw; /*fix the size of the text*/
+    }
+    .categories {
+        margin: 2% auto 15%; /*set some space for the outer of the categories*/
+    }
+    .categories a {
+        font-size: 2vw; /*fix the size of the links*/
+        transition: 0.2s ease-in-out;
+    }
+    
+    .subcategories {
+        display: flex;
+        justify-content: center;
+        margin: 10% auto 0; /*fix the outer space of the subcategories*/
+    }
+
+    .subcategories li {
+        margin: 2% auto 10%; /*the outer space for the items of the list*/
+    }
+    .subcategories a {
+        font-size: 2vw; /*fix the link text size*/
+        transition: 0.2s ease-in-out;
+    }
+    
+
+    .category-log {
+        margin: 10%; /*fix the outer space of the element*/
+        padding: 5%; /*fix the inner space fo the element*/
+        border-radius: 8px; /*round the corners*/
+    }
+
+    .categories a:hover, .subcategories a:hover { /*for the hover effect of the links*/
+        color: #E6E6FA;
+        transition: 0.2s ease-in-out;
+    }
+
+    .catImg img {
+        width: 80%;
+    }
+
+    .catImg hr {
+        background-color: var(--darkPink);
+        width: 30%;
+        margin: auto;
+    }
+
+
+    /* ================ NavBar ================ */
+
+    .pho { /* Hides the phone dimensions navigation bar */
+        display: none;
+    }
+
+    .lap { /* Displays the 800+ navigation bar and some basic properties */
+        height: 150px;
+        background-color: var(--pink);
+        color: white;
+
+        display: flex;
+        flex-direction: column;
+        place-content: center;
+        text-align: center;
+    }
+
+    .lap h1 { /* The logo rules */
+        margin-bottom: 40px;
+        font-family: 'Noto Serif', serif;
+        font-weight: 500;
+        font-size: 40px;
+    }
+    
+    .lap ul { /* The menu list rules */
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .lap a { /* The menu links properties and for the hover effect */
+        color: white;
+        position: relative;
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 18px;
+    }
+
+    .lap a:after { /* The hover effect */
+        content: '';
+        top: 40px;
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        left: 0;
+        background-color: white;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+    
+    }
+      
+    .lap a:hover:after { /* To show the hover efect */
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+
+    .act a { /* The active page */
+        font-weight: normal;
+    }
+    .act a:after { /* The active page effect */
+        transform: scaleX(1);
+    }
+
+
+    /* ================ Footer ================ */
+
+    footer { /* Change the height of the footer*/
+        height: 90vh;
+    }
+    .fooL { /* Change display propertie for the left side of the footer*/
+        display: flex;
+    }
+    .fmenu { /* Centers the footer menu */
+        margin: auto;
+    }
+    .cat { /* Centers the contact on footer */
+        margin: auto;
+        
+    }
+    .fmenu h5, .cat h5 { /* Change the titles on the footer*/
+        font-size: 4vw;
+        margin-bottom: 3.5vh;
+    }
+    .fmenu li, .cat li { /* Change list margin on the footer*/
+        margin-bottom: 1.5vh;
+    }
+    .fmenu a, .cat p { /* Change font size on the list elements on the footer*/
+        font-size: 3vw;
+    }
+
+    .social { /* Centers the icons and hides the left border line */
+        margin: auto 0;
+        border-left: none;
+    }
+    .social a { /* Change the font size on icons */
+        font-size: 8vw;
+    }
+
+    .outerfooter { /* Change the outer footer (the div under the footer) */
+        font-size: 2.5vw;
+        padding: 10px;
+    }
+
+
+
+    /* ================ Tech ================ */
+
+    .tech { /* Change the padding on the text and registaion pages */
+        padding: 125px 100px;
+    }
+
+    input[type=text], input[type=number], input[type=email], input[type=password], textarea { /* Change the padding on the text and textarea type inputs */
+        padding: 2.5%;
+    }
+}
+
+
+
+
+
+/* ================ laptop+ ================ */
+
+@media only screen and (min-width: 1280px) { /* The 2nd media query for dimensions 1280px+ */
+
+    /* ================ Index ================ */
+
+
+    .index section { /*set the display to be flex and the outer space of the elements to be 10% at the bottom*/
+        display: flex;
+        margin-bottom: 10%;
+    }
+
+    .index img {
+        margin: 0% auto 3%; /* fix the size of the images*/
+    }
+    .index h1 {
+        font-size: 2vw; /*change the size of the title*/
+        width: 80%; /*fix the width of the title*/
+        margin: 10% auto auto; /*set the outer space of the title*/
+        margin-bottom: 5%; 
+        padding-top: 0%; /*remove the top inner space*/
+    }
+    .index p {
+        font-size: 1.5vw; /*fix the size of the text*/
+        margin: auto auto 15%; 
+        width: 60%; /*set the width*/
+    }
+
+    .subcategories li {
+        font-size: 1.3rem;
+
+    }
+
+    /* ================ Categories  ================ */
+
+    .category-catalog {
+        padding-top: 10%; /*add space in the inner of the element*/
+    }
+    
+    .category-catalog h1 {
+        margin-bottom: 3%; /*add space to the outer of the element*/
+    }
+    .category-catalog p {
+        margin: auto 20% 10%; /*for the text and outer space*/
+        font-size: 1.3vw; /*fix the size*/
+    }
+    .categories {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(20%, 1fr));
+        margin: 2% auto 15%; /*add outer space of the element*/
+    }
+    .categories a {
+        font-size: 2vw; /*set the size of the link*/
+    }
+    
+    
+    .subcategories {
+        margin: 10% auto 0; /*add outer space on the element*/
+        flex-direction: column;
+    }
+
+    .subcategories li {
+        margin: 2% auto 10%; /*add outer space for each list item*/
+    }
+    .subcategories a {
+        font-size: 1.3vw; /*set the size of the link*/
+    }
+
+    .category-log {
+        margin: 5%;
+        padding: 5%;
+        border-radius: 8px; /*round the corners*/
+    }
+
+    .catImg img {
+        width: 70%;
+    }
+    .catImg hr {
+        display: none;
+    }
+
+
+    .fav {
+        margin-top: 20px;
+        margin-right: 20px;
+        align-self: flex-start;
+    }
+
+
+
+
+
+    /* ================ Favorites ================ */
+
+
+    .favad {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        margin-top: 10%;
+
+    }
+
+    .favad .carG {
+        display: grid; /*settign a grid layout*/
+        grid-template-columns: repeat(12, 1fr); /*making the columns of the grid*/
+        margin: 10% 1%;
+
+    }
+
+    .favad .carPho { /*display of the rental ad*/
+        display: flex;/*setting the display to be flex inside the grid*/
+        flex-direction: column;
+        padding: 1%;
+    }
+
+    .favad .carPho img { /*css for the image of the ad*/
+        margin: 8% 1% auto;
+        width: 100%;
+    }
+
+    .favad .carDR { /*css for the name of the add*/
+        font-size: 1rem;
+        margin: auto;
+        margin-left: 15%;
+        grid-column: 1 / 5;
+        padding: 7%;
+    }
+    .favad .carD { /*css for only the code and the price*/
+        font-size: 1rem;
+        margin-right: 10%;
+        grid-column: 7 / -1;
+        padding: 7%;
+
+    }
+
+
+    /* ================ About Us ================ */
+
+    .we { /* Change the background gradient effect to make it not blend with the navigation bar and the footer */
+
+        background: 
+                    linear-gradient(var(--hoverPink), rgba(255,0,0,0) 7%),
+                    linear-gradient(rgba(255,0,0,0) 80%, var(--hoverPink)),
+                    linear-gradient(to right, var(--hoverPink) 43%, var(--pink) 60%);
+    }
+
+    .we { /* Make the about us page 2 columns to make side by side the teammates */
+        grid-template-columns: repeat(2, 1fr);
+
+        padding-top: 20%;
+        padding-bottom: 20%;
+    }
+
+    .we img { /* Make the profile images bigger */
+        height: 150px;
+        width: 150px;
+    }
+
+    .we h3 { /* Change the margin on the team names */
+        margin-top: 3%;
+    }
+
+    .we h4 { /* Change the margin on the info titles */
+        margin-bottom: 2%;
+    }
+
+    .we p { /* Change the margin on the infos */
+        margin-bottom: 1%;
+    }
+    
+    .we div:nth-child(1) { /* Change the margin on the first div */
+        margin-bottom: 0%;
+    }
+
+    .corner-border { /* Creates some corners for effect */
+        padding: 5%;
+        
+        background:
+            linear-gradient(to right, whitesmoke 2px, transparent 2px) 10% 0,
+            linear-gradient(to left, whitesmoke 2px, transparent 2px) 90% 100%,
+            linear-gradient(to bottom, whitesmoke 2px, transparent 2px) 10% 0,
+            linear-gradient(to top, whitesmoke 2px, transparent 2px) 90% 100%;
+    
+        background-repeat: no-repeat;
+        background-size: 60px 60px;
+    }
+
+
+    /* ================ NavBar ================ */
+
+    .lap { /* Make the navigation bar with grid */
+        height: 100px;
+        display: grid;
+        grid-template-columns: 30% minmax(10%, 20%) 50%;
+    }
+
+    .lap h1 { /* Change the logo properties */
+        margin-bottom: auto;
+        font-size: 2vw;
+    }
+ 
+    .lap ul { /* Position the menu */
+        margin: auto 0;
+        grid-column: 3;
+    }
+    .lap a:after { /* The line when hover on the menu links */
+        top: 57px;
+    }
+    .lap a { /* Change the font size of the menu links */
+        font-size: 16px;
+    }
+
+
+
+    /* ================ Tech ================ */
+
+    .tech { /* Change the padding on the tech and registation pages */
+        padding: 150px 100px;
+    }
+
+    input[type=text], input[type=number], input[type=email], input[type=password], textarea { /* Change the padding on the text and textarea type inputs */
+        padding: 1.3%;
+    }
+
+    /* ================ Registation ================ */
+
+    details { /* Change the font size */
+        font-size: 1.4vw;
+    }
+    legend { /* Change the font size */
+        font-size: 2vw;
+    }
+
+    .rad h4 { /* Change the font size */
+        font-size: 1.2vw;
+    }
+
+    .lbl { /* Change the font size */
+        font-size: 1.2vw;
+        margin-bottom: 2%;
+    }
+
+
+
+
+
+    /* ================ Ads ================ */
+
+    .carR {
+        margin-bottom: 20%; /*set the bottom outer space*/
+    }
+    .carR h1 {
+        font-size: 2.5vw; /*set the text size of the title*/
+        padding: 10% 0 0; /*set the inner space of the title*/
+    }
+    .carR p:nth-child(2) {
+        font-size: 1.5vw; /*set the text size*/
+        margin-top: 2%; 
+    }
+
+    .carPho {
+        flex-direction: row; /*set the direction od the layout*/
+    }
+    .carPho article { /*fot the ad*/
+        font-size: 1.3vw;
+        padding: 3%;
+    }
+    .carPho img { /*for the image of the ad*/
+        width: 50%;
+        margin: 2%;
+        max-width: 300px;
+    }
+
+    .carDR, .carD { /*title code and price*/
+        font-size: 1.5vw;
+        padding: 2%;
+    }
+
+    
+
+
+    /* ================ Footer ================ */
+
+    footer { /* Make the footer with 2 columns */
+        grid-template-columns: 68% 32%;
+        height: 40vh;
+    }
+    .fooL { /* Makes the left side of the menu with columns for better spacing */
+        grid-template-columns: repeat(5, 1fr);
+    }
+    .fmenu { /* Position the menu on the footer */
+        grid-column: 2;
+        margin: auto;
+    }
+    
+    .cat { /* Position the contact on the footer */
+        grid-column:  4;
+        margin: auto;
+    }
+    .fmenu h5, .cat h5 { /* Change the font size on the footer titles */
+        font-size: 1.6vw;
+    }
+    .fmenu li, .cat li { /* Change the margin on the list items */
+        margin-bottom: 3%;
+    }
+    .fmenu a, .cat p { /* Change the font size on the footer list content */
+        font-size: 1.4vw;
+    }
+
+    .social { /* Change the margin and creates the left line on the footer */
+        margin: auto 0;
+        border-left: 2px solid white;
+    }
+    .social a { /* Change the font size on the icons */
+        font-size: 4vw;
+    }
+
+    .outerfooter { /* Change the font size and the padding on the outerfooter (the div under the footer) */
+        font-size: 1.2vw;
+        padding: 10px;
+    }
+
+
+}
